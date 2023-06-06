@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.2)
+set(PROJ_NAME Game)
+project(${PROJ_NAME})
+set(CMAKE_CXX_STANDARD 17)
+file(GLOB src "src/*.cpp")
+include_directories(src/)
+add_executable(${PROJ_NAME} main.cpp ${src})
