@@ -26,7 +26,12 @@ void Util::Terminal::get_size() {
         row = max.ws_row;
     #endif
     if(curr_column != column || curr_row != row) {
-        LogDebug << "Changed size of terminal to " << row << " x " << column << std::endl;
+        logDebug() << "Changed size of terminal to " << row << " x " << column << "\n";
+        logError() << "Changed size of terminal to " << row << " x " << column << "\n";
+        logFatal() << "Changed size of terminal to " << row << " x " << column << "\n";
+        logWarning() << "Changed size of terminal to " << row << " x " << column << "\n";
+        logInfo() << "Changed size of terminal to " << row << " x " << column << "\n";
+
     }
 }
 
